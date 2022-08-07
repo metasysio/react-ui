@@ -1,5 +1,5 @@
 {
-  "name": "ui-component",
+  "name": "@metasysio/ui-components",
   "version": "1.0.0",
   "description": "MetaSysIO Components Core",
   "author": "Alexandre Finger Sobrinho",
@@ -14,7 +14,9 @@
   "scripts": {
     "build": "rollup -c"
   },
-  
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/metasysio"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
