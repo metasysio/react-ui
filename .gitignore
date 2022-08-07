@@ -1,0 +1,13 @@
+
+# Dependency directories
+node_modules/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Logs
+yarn-debug.log*
+yarn-error.log*
+
+# Generate output
+dist
