@@ -4,23 +4,23 @@ import typescript from "@rollup/plugin-typescript";
 // import dts from "rollup-plugin-dts";
 import sass from "rollup-plugin-sass";
 
-import packageJson from "./package.json";
+import pkg from "./package.json";
 
 export default [
   {
-    input: "src/index.ts",
+    input: "packages/index.ts",
     output: [
       {
-        file: packageJson.main,
-        format: "cjs",
+        file: pkg.main,
+        format: "esm",
         sourcemap: true,
         exports: "named",
+        preserveModulesRoot: "packages",
       },
     ],
     plugins: [
       sass({ insert: true }),
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
-    external: ["react", "react-dom"],
   },
 ];

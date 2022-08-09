@@ -1,13 +1,19 @@
 {
   "name": "@metasysio/react-ui",
   "version": "1.0.6",
-  "description": "MetaSysIO Components Core",
+  "description": "MetaSysIO React UI Components",
   "author": "Alexandre Finger Sobrinho",
   "private": false,
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
+  "homepage": "https://github.com/metasysio/react-ui",
+  "bugs": "https://github.com/metasysio/react-ui/issues",
+  "repository": {
+    "url": "https://github.com/metasysio/react-ui",
+    "type": "git"
+  },
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "yarn prebuild && rollup -c"
