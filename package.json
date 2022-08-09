@@ -1,13 +1,12 @@
 {
   "name": "@metasysio/react-ui",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "MetaSysIO React UI Components",
   "author": "Alexandre Finger Sobrinho",
   "private": false,
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
   "homepage": "https://github.com/metasysio/react-ui",
   "bugs": "https://github.com/metasysio/react-ui/issues",
   "repository": {
