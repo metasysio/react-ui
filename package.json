@@ -1,18 +1,16 @@
 {
-  "name": "@metasysio/ui-components",
-  "version": "1.0.5",
+  "name": "@metasysio/react-ui",
+  "version": "1.0.6",
   "description": "MetaSysIO Components Core",
   "author": "Alexandre Finger Sobrinho",
-  "license": "MIT",
   "private": false,
+  "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "prebuild": "rm -rf dist",
+    "build": "yarn prebuild && rollup -c"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -27,5 +25,8 @@
     "rollup-plugin-sass": "^1.2.13",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
