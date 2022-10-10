@@ -9,7 +9,8 @@ describe("Test Component Button", () => {
 
   beforeEach(() => {
     props = {
-      variant: "primary"
+      variant: "primary",
+      children: 'BUTTON'
     };
   });
 
@@ -20,7 +21,7 @@ describe("Test Component Button", () => {
 
     const buttonComponent = getByTestId("msi-button");
 
-    expect(buttonComponent).toHaveClass("btn-primary");
+    expect(buttonComponent).toHaveClass("primary");
   });
 
   it("should have secondary className with theme set as secondary", () => {
@@ -29,6 +30,6 @@ describe("Test Component Button", () => {
 
     const buttonComponent = getByTestId("msi-button");
 
-    expect(buttonComponent).toHaveClass("btn-secondary");
+    expect(buttonComponent).toHaveClass("secondary");
   });
 });

@@ -1,16 +1,52 @@
 @import '../../msi-styles/theme.scss';
 
-.btn {
-  color: $primary;
-  border: 1px solid $primary-dark;
+.button {
+  @extend %button-fonts;
+  width: max-content;
+  padding: 0.5rem;
+  height: 3rem;
+  border-radius: 4px;
+  color: $on-primary-high-emphasys;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
 }
 
-.btn-primary {
-  color: $primary;
-  border-color: $primary-dark;
+.primary {
+  background: $primary;
 }
 
-.btn-secondary {
-  color: $secondary;
-  border-color: $secondary-dark;
+.secondary {
+  background: $secondary;
+}
+
+.success {
+  background: $success;
+}
+
+.outlined {
+  border: 1px solid $on-surface-disabled;
+
+  color: $on-surface-medium-emphasys;
+
+  &:hover {
+    background-color: $on-surface-disabled;
+  }
+
+}
+
+.warning {
+  background: $warning;
+}
+
+.info {
+  background: $info;
+}
+
+.danger {
+  background: $danger;
 }
