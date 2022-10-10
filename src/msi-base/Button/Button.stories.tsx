@@ -1,9 +1,19 @@
-import React from 'react'
-import { Button } from './Button';
+import React from "react";
+import { Button } from "./Button";
 
 export default {
-  title: 'ButtonComponent'
-}
+  title: "ButtonComponent",
+};
 
-export const primary = () => <Button variant='primary'>Primary</Button>
-export const secondary = () => <Button variant='secondary'>Secondary</Button>
+export const ButtonComponent = () => {
+  return (
+    <>
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="warning">Warning</Button>
+      <Button variant="danger">Danger</Button>
+      <Button variant="info">Info</Button>
+    </>
+  );
+};
