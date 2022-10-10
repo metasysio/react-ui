@@ -1,0 +1,16 @@
+@import '../../msi-styles/theme.scss';
+
+.btn {
+  color: $primary;
+  border: 1px solid $primary-dark;
+}
+
+.btn-primary {
+  color: $primary;
+  border-color: $primary-dark;
+}
+
+.btn-secondary {
+  color: $secondary;
+  border-color: $secondary-dark;
+}

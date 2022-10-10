@@ -1,0 +1,74 @@
+@import './theme.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @include body-mobile;
+  -webkit-font-smoothing: antialiased;
+  background-color: $surface;
+  height: 100%;
+  // height: 100vh;
+  color: $on-surface-medium-emphasys;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  @media (min-width: 600px) {
+    @include body-desktop;
+  }
+
+  @media(min-width: 2000px) {
+    @include body-tv;
+  }
+
+}
+
+#__next {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  @extend %headline1;
+}
+
+h2 {
+  @extend %headline2;
+}
+
+h3 {
+  @extend %headline3;
+}
+
+h4 {
+  @extend %headline4;
+}
+
+h6 {
+  @extend %headline5;
+}
+
+h6 {
+  @extend %headline6;
+}
+
+hr {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.react-icons {
+  color: $on-primary-high-emphasys;
+  vertical-align: text-top;
+  margin-right: 5px;
+}

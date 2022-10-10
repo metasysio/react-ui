@@ -1,18 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "module": "ESNext",
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "target": "es5",
+    "lib": ["DOM", "ES6","ES2016","ES2017"],
     "sourceMap": true,
-    "outDir": "dist",
-    "strict": true,
-    "allowJs": false,
     "moduleResolution": "node",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "declaration": true
   },
-  "include": ["packages"],
-  "exclude": ["node_modules", "dist", "rollup.config.js"]
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules", 
+    "dist", 
+    "rollup.config.js",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx"
+  ]
 }

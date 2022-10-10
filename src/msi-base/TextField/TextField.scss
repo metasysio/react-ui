@@ -1,0 +1,82 @@
+@import '../../msi-styles/theme.scss';
+
+%label-float {
+  background-color: $surface-overlay;
+  font-size: 0.7rem;
+  top: -24px;
+  left: 8px;
+  padding: 0 0.5rem;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 94px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+
+  /* Error messages */
+  >span {
+    color: $danger;
+    padding-left: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+.inputWrapper {
+  position: relative;
+
+  >input {
+    background: $surface-overlay;
+    width: 100%;
+    height: 3.125rem;
+    padding: 1rem;
+    border: 1px solid rgba($on-surface-disabled,0.1);
+    color: $on-surface-medium-emphasys;
+    border-radius: 4px;
+
+    &:not(:placeholder-shown)+label,
+    :-webkit-autofill~label {
+      @extend %label-float;
+      
+    }
+    /* Define the autofill background-color */
+    &:-webkit-autofill,
+    :-webkit-autofill:hover, 
+    :-webkit-autofill:focus, 
+    :-webkit-autofill:active {
+        box-shadow: 0 0 0 30px white inset !important;
+        -webkit-box-shadow: 0 0 0 30px $surface-overlay inset !important;
+    }
+    
+  }
+
+  &:focus-within>input {
+    border: 1px solid $primary-300;
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    margin-top: 17px;
+    left: 1.1rem;
+    @extend %caption;
+    color: $on-surface-disabled;
+    font-size: 0.8rem;
+    pointer-events: none;
+    transition: top 0.3s ease-out;
+    -webkit-transition: top 0.3s ease-out;
+    -moz-transition: top 0.3s ease-out;
+    z-index: 1;
+  }
+
+  &:focus-within>label {
+    @extend %label-float;
+    color: $primary-300;
+  }
+}
