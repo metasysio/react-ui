@@ -1,0 +1,59 @@
+@import "../../msi-styles/theme.scss";
+
+.checkbox {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  
+  *:hover {
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 0.15em;
+    margin-right: 0.5em;
+    border: 0.15em solid $primary;
+    outline: none;
+  }
+}
+
+.checked {  
+  >input, span {
+    background-color: $primary;
+  }
+  
+  .checkmark::after {
+    border-color: $on-primary-high-emphasys;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  left: 2px;
+  height: 16px;
+  width: 16px;
+  background-color: $on-primary-high-emphasys;
+
+  &:after {
+    content: " ";
+    position: relative;
+    display: block;
+    left: 5px;
+    top: -1px;
+    width: 3px;
+    height: 12px;
+    border: solid $on-primary-high-emphasys;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-width: 0 4px 4px 0;
+    transform: rotate(42deg);
+  }
+}

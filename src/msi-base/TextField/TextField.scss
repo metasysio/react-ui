@@ -3,7 +3,7 @@
 %label-float {
   background-color: $surface-overlay;
   font-size: 0.7rem;
-  top: -37px;
+  top: -24px;
   left: 8px;
   padding: 0 0.5rem;
 }
@@ -34,7 +34,7 @@
   >input {
     background: $surface-overlay;
     width: 100%;
-    height: 2.125rem;
+    height: 3.125rem;
     padding: 1rem;
     border: 1px solid rgba($on-surface-disabled,0.1);
     color: $on-surface-medium-emphasys;
@@ -63,7 +63,7 @@
   label {
     position: absolute;
     top: 0;
-    margin-top: 1.7rem;
+    margin-top: 17px;
     left: 1.1rem;
     @extend %caption;
     color: $on-surface-disabled;
