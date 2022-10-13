@@ -8,13 +8,12 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 }) => {
   return (
     <div className={`checkbox ${props.checked ? "checked" : ""}`}>
-      <label htmlFor={name}>{label}</label>
+      {label && <label htmlFor={name}>{label}</label>}
       <input
         name={name}
         id={name}
         type="checkbox"
         checked={props.checked}
-        // className={props.checked ? "checked" : ""}
         {...props}
       />
       <span className={"checkmark"} />
